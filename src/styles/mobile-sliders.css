@@ -1,0 +1,124 @@
+/* ===== SLIDERS FOR WHY & TESTIMONIALS ===== */
+
+/* Removed desktop-only/mobile-only classes as sliders are now used universally */
+
+/* Centered Slider Container */
+.mobile-slider-container {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    max-width: 800px;
+    /* Constrain width on desktop */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mobile-slider-wrapper {
+    position: relative;
+    width: 100%;
+    min-height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 60px;
+    /* Space for arrows */
+}
+
+/* Ensure slide card fits nicely */
+.mobile-slide-card {
+    width: 100%;
+    position: relative;
+    /* Styles inherited from .why-card or .testimonial-card in theme.css */
+    /* Add specific overrides if needed */
+    text-align: center;
+}
+
+/* Nav Buttons */
+.mobile-nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: none;
+    background: rgba(255, 140, 66, 0.2);
+    backdrop-filter: blur(5px);
+    color: #ff8c42;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 10;
+    border: 1px solid rgba(255, 140, 66, 0.3);
+}
+
+.mobile-nav-btn.left {
+    left: 0;
+}
+
+.mobile-nav-btn.right {
+    right: 0;
+}
+
+.mobile-nav-btn:hover {
+    background: #ff8c42;
+    color: #000;
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 140, 66, 0.5);
+}
+
+.mobile-nav-btn:active {
+    transform: translateY(-50%) scale(0.95);
+}
+
+/* Slider Dots */
+.mobile-slider-dots {
+    margin-top: 2rem;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.mobile-slider-dots .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.mobile-slider-dots .dot:hover {
+    background: rgba(255, 140, 66, 0.5);
+}
+
+.mobile-slider-dots .dot.active {
+    background: #ff8c42;
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgba(255, 140, 66, 0.4);
+    border-color: #ff8c42;
+}
+
+@media (max-width: 768px) {
+    .mobile-slider-container {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+
+    .mobile-slider-wrapper {
+        padding: 0 45px;
+        min-height: 200px;
+    }
+
+    .mobile-nav-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem;
+    }
+}
