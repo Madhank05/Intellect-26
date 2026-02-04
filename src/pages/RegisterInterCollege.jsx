@@ -220,7 +220,7 @@ export default function RegisterInterCollege({ onBack }) {
                     <span>Code Quiz Arena</span>
                   </label>
                   <label className="event-option">
-                    <input type="checkbox" name="entry.1177368021" value="Electric Scops" />
+                    <input type="checkbox" name="entry.1177368021" value="Electric Scop" />
                     <span>Electric Scop</span>
                   </label>
                   <label className="event-option">
